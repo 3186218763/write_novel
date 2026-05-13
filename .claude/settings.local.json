@@ -1,0 +1,77 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(npx skills *)",
+      "Bash(git config *)",
+      "Bash(curl -s --connect-timeout 5 -o /dev/null -w \"%{http_code}\" https://github.com)",
+      "Bash(curl -s --connect-timeout 5 --proxy http://127.0.0.1:7890 -o /dev/null -w \"%{http_code}\" https://github.com)",
+      "Bash(curl -s --connect-timeout 5 --proxy http://127.0.0.1:10090 -o /dev/null -w \"%{http_code}\" https://github.com)"
+    ]
+  },
+  "skipWebFetchPreflight": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/detect-story-gaps.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-end.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/validate-story-commit.sh",
+            "timeout": 15,
+            "if": "Bash(git commit*)"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/pre-compact.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-compact.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
