@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/song1/.claude/skills/story-long-write/references/**)",
+      "Read(//c/Users/song1/.agents/skills/story-long-write/references/**)",
+      "WebSearch"
+    ]
+  }
+}
