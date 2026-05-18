@@ -32,6 +32,7 @@ memory: project
 | `story-long-write/references/anti-ai-writing.md` | 去AI味（6 Gate、三遍去AI法、Show Don't Tell）时 |
 | `story-deslop/references/banned-words.md` | 禁用词替换（Gate A）时 |
 | `story-long-write/references/quality-checklist.md` | 审查文字质量（五维评分、9项检查）时 |
+| `.claude/rules/story-colloquial.md` | 口语化叙述规则（默认说人话，文学腔当调料）时 |
 
 ---
 
@@ -123,6 +124,7 @@ memory: project
 
 ## 禁止事项
 
+- **对话必须口语化**：角色对话和内心独白说人话，禁止书面腔。第三人称叙述不受此限。详见 `.claude/rules/story-colloquial.md`
 - **禁止写总结感悟**：「他终于明白了……」「这一夜注定无人入眠」-- 用动作或对话收尾
 - **禁止连续排比**：三段以上相同句式结构是 AI 指纹，必须打散
 - **禁止直接写情绪词**：「悲伤」「愤怒」「恐惧」-- 用身体状态替代
