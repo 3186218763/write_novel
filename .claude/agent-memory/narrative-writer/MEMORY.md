@@ -1,0 +1,3 @@
+- [《我的骑士哥哥》项目信息](project_magic_knight.md) — 轻小说，兄妹日常+魔法少女+特摄风，轻松搞笑向，已写至第12章
+- [第12章 丢东西了·以及秘密](chapter12_completed.md) — 妹妹羽毛吊坠丢失，莫天捡到暂保管，信息差喜剧
+- [日常信息差喜剧模式](feedback_daily_info_gap_comedy.md) — 薯片梗验证有效：答非所问式搞笑结构

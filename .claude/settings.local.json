@@ -6,10 +6,13 @@
       "Bash(git config *)",
       "Bash(curl -s --connect-timeout 5 -o /dev/null -w \"%{http_code}\" https://github.com)",
       "Bash(curl -s --connect-timeout 5 --proxy http://127.0.0.1:7890 -o /dev/null -w \"%{http_code}\" https://github.com)",
-      "Bash(curl -s --connect-timeout 5 --proxy http://127.0.0.1:10090 -o /dev/null -w \"%{http_code}\" https://github.com)"
+      "Bash(curl -s --connect-timeout 5 --proxy http://127.0.0.1:10090 -o /dev/null -w \"%{http_code}\" https://github.com)",
+      "Skill(story-long-write)",
+      "Skill(story-long-write:*)",
+      "Skill(story-review)",
+      "Skill(story-review:*)"
     ]
   },
-  "skipWebFetchPreflight": true,
   "hooks": {
     "SessionStart": [
       {
@@ -45,8 +48,8 @@
           {
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/validate-story-commit.sh",
-            "timeout": 15,
-            "if": "Bash(git commit*)"
+            "if": "Bash(git commit*)",
+            "timeout": 15
           }
         ]
       }
@@ -73,5 +76,6 @@
         ]
       }
     ]
-  }
+  },
+  "skipWebFetchPreflight": true
 }
