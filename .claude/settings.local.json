@@ -10,7 +10,10 @@
       "Skill(story-long-write)",
       "Skill(story-long-write:*)",
       "Skill(story-review)",
-      "Skill(story-review:*)"
+      "Skill(story-review:*)",
+      "Read(//e/Py_Project/.claude/rules/**)",
+      "Read(//c/Users/song1/.claude/skills/story-review/references/**)",
+      "Read(//c/Users/song1/.agents/skills/story-review/references/**)"
     ]
   },
   "hooks": {
@@ -72,6 +75,11 @@
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-compact.sh",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/format-novel.sh",
+            "timeout": 30
           }
         ]
       }

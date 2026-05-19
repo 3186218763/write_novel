@@ -18,6 +18,23 @@
 | `/story-setup`、`/准备写书` | story-setup | 环境部署 · hooks/rules/agents 一键部署 |
 | `/browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
 
+## 通用 Skills
+
+| 命令 | Skill | 说明 |
+|------|-------|------|
+| `/word`、`/docx` | word-power-tools | Word 文档处理（转换/提取/替换/合并/排版） |
+| `/去AI味`、`/humanize` | humanize:text | 去AI味 · 让文字自然有人味 |
+| `/美化代码` | humanize:code | 代码去AI味 |
+| `/配置` | update-config | 修改 settings.json 配置（权限/钩子/环境变量） |
+| `/快捷键` | keybindings-help | 自定义键盘快捷键 |
+| `/简化` | simplify | 审查代码质量/效率并优化 |
+| `/免打扰` | fewer-permission-prompts | 减少权限弹窗 · 添加命令白名单 |
+| `/定时`、`/loop` | loop | 定时重复执行任务 |
+| `/claude-api` | claude-api | 构建/调试/优化 Claude API / Anthropic SDK 应用 |
+| `/初始化` | init | 初始化 CLAUDE.md |
+| `/review` | review | Review Pull Request |
+| `/安全审查` | security-review | 安全审查当前分支变更 |
+
 ## 文件结构
 
 - `拆文库/` — 拆文分析结果存放目录
