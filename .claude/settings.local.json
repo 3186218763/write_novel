@@ -1,6 +1,7 @@
 {
   "permissions": {
     "allow": [
+      "Bash *",
       "WebFetch(domain:github.com)",
       "Bash(npx skills *)",
       "Bash(git config *)",
@@ -13,7 +14,12 @@
       "Skill(story-review:*)",
       "Read(//e/Py_Project/.claude/rules/**)",
       "Read(//c/Users/song1/.claude/skills/story-review/references/**)",
-      "Read(//c/Users/song1/.agents/skills/story-review/references/**)"
+      "Read(//c/Users/song1/.agents/skills/story-review/references/**)",
+      "Bash(python -c \"import docx; print\\('ok'\\)\")",
+      "Bash(python3 -c \"import docx; print\\('ok'\\)\")",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(python -c ' *)"
     ]
   },
   "hooks": {

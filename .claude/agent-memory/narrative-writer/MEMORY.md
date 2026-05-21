@@ -1,7 +1,1 @@
-- [《我的骑士哥哥》项目信息](project_magic_knight.md) — 轻小说，兄妹日常+魔法少女+特摄风，轻松搞笑向，已写至第12章
-- [第12章 丢东西了·以及秘密](chapter12_completed.md) — 妹妹羽毛吊坠丢失，莫天捡到暂保管，信息差喜剧
-- [日常信息差喜剧模式](feedback_daily_info_gap_comedy.md) — 薯片梗验证有效：答非所问式搞笑结构
-- [第7章 上课与加班·以及借口 重写](chapter7_rewrite.md) — 莫天"去厕所"翘课观战魔法少女妹妹打架，双线交替信息差喜剧
-- [第6章 重写](chapter6_rewrite.md) — 标题加"以及面包香"，加妹"想吃饭"动机钩子，删"她说"标签，扩展战斗感官密度
-- [第11章 框架重写·魔女会污染标记](chapter11_rewrite_magic_girl_council.md) — 莫天入梦捏碎魔女会标记，发现"有人在操控"，章尾极简暗线暗示
-- [第18章 情报·梦世界巡视](chapter18_completed.md) — 莫天视角章，裂缝自愈+注视确认+清晨厨房收束
+- [Chapter 003 Completed](chapter003_completed.md) — 莫宁梦初战, 小白骂醒, 右臂受伤对齐第004章, 林筱筱察觉线建立

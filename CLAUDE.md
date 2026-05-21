@@ -16,7 +16,7 @@
 | `/story-import`、`/导入` | story-import | 逆向导入已有小说到项目结构 |
 | `/story`、`/网文` | story | 工具箱路由 · 模糊意图自动分发 |
 | `/story-setup`、`/准备写书` | story-setup | 环境部署 · hooks/rules/agents 一键部署 |
-| `/browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
+| `/browser`、`/browser-cdp` | browser | 浏览器自动化（CDP） |
 
 ## 通用 Skills
 
@@ -38,6 +38,7 @@
 ## 文件结构
 
 - `拆文库/` — 拆文分析结果存放目录
+- `novel/研究/` — 写作技法研究、素材库（打斗库、幽默素材库、对话写作研究等）
 - `novel/正文/` — 长篇小说正文章节
 - `novel/设定/` — 角色设定、世界设定
 - `novel/大纲/` — 卷纲、细纲

@@ -1,9 +1,52 @@
 {
   "permissions": {
     "allow": [
+      "Bash(*)",
       "Read(//c/Users/song1/.claude/skills/story-long-write/references/**)",
       "Read(//c/Users/song1/.agents/skills/story-long-write/references/**)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:www.meipian.cn)",
+      "WebFetch(domain:zhuanlan.zhihu.com)",
+      "WebFetch(domain:write.qq.com)",
+      "WebFetch(domain:baijiahao.baidu.com)",
+      "Bash(python3 -c ' *)",
+      "Bash(awk '{print $1}')",
+      "Bash(awk '{ if \\(length > 30\\) print length, $0 }' \"d:/szj/write_novel/novel/正文/第015章_风平浪静.md\")",
+      "Bash(python -c ' *)",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" show HEAD:\"novel/正文/第032章_异常.md\")",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" log --oneline --all -- \"*/第032章_异常.md\")",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" show HEAD:novel/正文/第032章_异常.md)",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" status --short -- \"*/第032章*\")",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" diff --no-color -- \"novel/正文/第032章_异常.md\")",
+      "Bash(git -C \"d:\\\\szj\\\\write_novel\" diff --no-color --cached -- \"novel/正文/第032章_异常.md\")",
+      "Bash(git merge *)",
+      "Bash(git worktree *)",
+      "Bash(rm -rf .claude/worktrees)",
+      "Bash(node -e ' *)",
+      "Bash(git diff *)",
+      "Bash(chcp 65001)",
+      "Bash(iconv -f utf-8 -t utf-8)",
+      "Bash(diff -u /dev/null /dev/null && echo \"diff available\")",
+      "Read(//dev/**)",
+      "Read(//d/skills/**)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(python d:/szj/write_novel/.claude/check_format.py > d:/szj/write_novel/.claude/check_results.txt 2>&1 *)",
+      "Bash(rm -f \"d:/szj/write_novel/.claude/check_format.py\" \"d:/szj/write_novel/.claude/check_tags.py\" \"d:/szj/write_novel/.claude/check_tags2.py\" \"d:/szj/write_novel/.claude/check_results.txt\")"
+    ],
+    "additionalDirectories": [
+      "d:\\szj\\write_novel\\.claude"
     ]
+  },
+  "enabledPlugins": {
+    "browse@browserbase": true
+  },
+  "extraKnownMarketplaces": {
+    "browserbase": {
+      "source": {
+        "source": "directory",
+        "path": "D:\\skills"
+      }
+    }
   }
 }
