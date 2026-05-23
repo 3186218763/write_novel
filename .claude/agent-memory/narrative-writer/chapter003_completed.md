@@ -5,7 +5,17 @@ metadata:
   type: project
 ---
 
-# Chapter 003: 菜鸟初战 (Completed)
+# Chapter 003: 菜鸟初战 (Completed + Polished 2026-05-22)
+
+### Polish Updates (2026-05-22)
+- **Format compliance**: All paragraphs one sentence, <=60 Chinese chars, no inter-paragraph blank lines
+- **AI味 suppression**: Zero banned-word hits; "脑海中" removed; "若隐若现" -> "明灭"
+- **Combat pacing**: Injured paragraphs split into standalone beats; final beam ultra-short lines
+- **Witch atmosphere**: Barrier entry linear sensory progression; creep imagery strengthened
+- **Brick fight**: Shorter sentences ("没魔力。纯靠拳头。")
+- **Opening dialogue**: Micro-tightened + deduplicated
+- **Key moments preserved**: "打打打打打", "你哥明天早上叫谁起床", Mo Tian flashback, "好刺激", Lin ending
+- **Zero content deletion**: All plot nodes and dialogue semantics intact
 
 ## Core Scene Sequence
 1. **School end + banter** (~500 chars): Lin Xiaoxiao teases Mo about sports — sets up normalcy before the break

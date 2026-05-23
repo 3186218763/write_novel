@@ -1,1 +1,5 @@
-- [Chapter 003 Completed](chapter003_completed.md) — 莫宁梦初战, 小白骂醒, 右臂受伤对齐第004章, 林筱筱察觉线建立
+- [Chapter 003 Completed](chapter003_completed.md) — 莫宁梦初战, 小白骂醒, 右臂受伤对齐第004章, 林筱筱察觉线建立（已被2026-05-22重写版取代）
+- [Chapter 003 Rewrite](chapter003_rewrite.md) — 2026-05-22 全文重写：按细纲22条情节点，~3900字，7处像，禁用词零命中，格式合规
+- [Chapter 007 Fixes](chapter007_fixes.md) — 三项修复：AI模板句替换、段间空行检查、唐雨场景过渡优化
+- [Chapter 001 Rewrite](chapter001_rewrite.md) — 2026-05-22 全文重写：按细纲+角色设定重写，~4000字，禁用词零命中，格式合规
+- [Chapter 004 Rewrite](chapter004_rewrite.md) — 2026-05-23 全文重写：按细纲23条情节点，~2700字，纯日常喜剧，信息差笑点，禁用词零命中，格式合规
