@@ -1,0 +1,47 @@
+{
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash 'e:\\Py_Project\\write_novel\\.codex\\hooks\\pre-compact.sh'",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash 'e:\\Py_Project\\write_novel\\.codex\\hooks\\post-compact.sh'",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash 'e:\\Py_Project\\write_novel\\.codex\\hooks\\format-novel.sh'",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash 'e:\\Py_Project\\write_novel\\.codex\\hooks\\session-start.sh'",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "bash 'e:\\Py_Project\\write_novel\\.codex\\hooks\\detect-story-gaps.sh'",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
