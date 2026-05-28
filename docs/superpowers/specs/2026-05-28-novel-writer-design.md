@@ -109,6 +109,7 @@
 | `/novel outline` | outline | 大纲构思 |
 | `/novel character` | character | 角色设计 |
 | `/novel scene` | scene | 场景技法分析 |
+| `/novel polish` | polish | 语言润色 |
 | `/novel import` | import | 导入已有小说 |
 | `/novel setup` | setup | 部署写作环境 |
 | `/novel cover` | cover | 生成封面 |
@@ -141,6 +142,7 @@
 用户输入 → 正规化（命令/关键词 → 标准意图名） → 意图映射 → 粒度判断
   ┌── 轻量（单步操作，不跨文件）→ 内联执行
   ├── 动态（先轻后重）→ 先内联尝试，超阈值自动升级委派
+  │     阈值：涉及章节 > 3 章 或 总字数 > 10000 字 → 触发升级
   └── 重量（多步/Agent协作/大量上下文）→ delegate_task 委派
 ```
 
@@ -168,6 +170,9 @@
 | 世界观设计 | 重量 | 委派 | character-designer |
 | 场景技法分析 | 重量 | 委派 | scene-specialist |
 | 批量去AI味（多章） | 重量 | 委派 | polisher |
+| 语言润色 | 轻量 | 内联 | — |
+| 短篇写作 | 重量 | 委派 | narrative-writer |
+| 短篇拆文 | 重量 | 委派 | story-architect |
 
 ### 2.4 委派模板
 
@@ -263,6 +268,21 @@ polisher：精修时批量 → 跨章风格统一 + novel-tools slop scan 全量
 - **lean 审查**：2 Agent 并行（consistency-checker + polisher）
 - **降级机制**：任一 Agent 失败 → 降为 lean；都失败 → 降为 solo
 - Agent 独立并行，各自分析，审查协调器收集报告并交叉验证
+- **平台依赖**：若 Hermes delegate_task 不支持并行，则降为顺序执行（不影响正确性）
+
+### 3.5 Agent 工具权限映射
+
+Agent prompt 中使用通用名称，Hermes 实际工具映射如下：
+
+| Agent 权限名 | Hermes 工具 |
+|-------------|------------|
+| Read | read_file |
+| Write | write_file |
+| Edit | patch |
+| Glob | search_files(target="files") |
+| Grep | search_files(target="content") |
+| Bash | terminal |
+| WebSearch | web_search / web_fetch |
 
 ---
 
@@ -347,7 +367,7 @@ Phase 3: 精修审查 (polish.md)
   产出 → 审查报告 / 精修正文 / 问题清单
 ```
 
-### 5.2 Hooks 迁移（9→7）
+### 5.2 Hooks 迁移（9→8）
 
 | 原 Hook | Hermes 实现 | 说明 |
 |---------|------------|------|
@@ -391,9 +411,11 @@ compact 后按顺序加载：
 7. {项目目录}/审查/上次审查报告.md             — 已知问题
 ```
 
-### 5.5 路径约定
+### 5.5 路径约定与迁移
 
 全项目统一使用 `{项目目录}/` 变量路径，不写死 `novel/` 或 `{书名}/`。所有引用均使用变量格式。
+
+**现有项目迁移**：当前 write_novel 项目使用 `novel/` 子目录嵌套结构（novel/正文/、novel/追踪/ 等）。实现时需将内容迁移到扁平结构（正文/、追踪/ 直接在项目根目录下），与 novel_any 模板约定统一。AGENTS.md 中的路径引用同步更新。
 
 ### 5.6 Agent 命名统一
 
