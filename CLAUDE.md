@@ -59,3 +59,52 @@ Agent 间的协调关系由各 Agent 定义文件的职责边界描述，不需�
 4. 当前章节的情绪/节奏目标
 
 如果存在 novel/追踪/上下文.md，compact 后首先读取恢复上下文。
+
+<!-- SPECKIT START -->
+## Spec Kit — Spec-Driven Development
+
+Spec Kit 是一套规格驱动开发（SDD）工具。
+
+| 命令 | Skill | 说明 |
+|------|-------|------|
+| `/speckit-specify` | speckit-specify | 基于自然语言描述创建功能规格文档 |
+| `/speckit-plan` | speckit-plan | 基于规格生成技术实现计划 |
+| `/speckit-tasks` | speckit-tasks | 将计划分解为可执行的任务列表 |
+| `/speckit-implement` | speckit-implement | 逐任务执行实现 |
+| `/speckit-analyze` | speckit-analyze | 跨文档一致性与质量分析（只读） |
+| `/speckit-clarify` | speckit-clarify | 识别规格中的歧义并澄清 |
+| `/speckit-constitution` | speckit-constitution | 创建/更新项目宪法（核心原则） |
+| `/speckit-checklist` | speckit-checklist | 生成领域自定义检查清单 |
+| `/speckit-taskstoissues` | speckit-taskstoissues | 将任务转为 GitHub Issues |
+
+### 工作流
+
+```
+/speckit-constitution  →  定义项目核心开发原则
+         ↓
+/speckit-specify       →  用自然语言描述功能 → 生成 spec.md
+         ↓
+/speckit-clarify       →  澄清规格中的歧义（可选，建议）
+         ↓
+/speckit-plan          →  生成 plan.md + research.md + data-model.md + contracts/
+         ↓
+/speckit-tasks         →  生成 tasks.md（可执行的任务列表）
+         ↓
+/speckit-analyze       →  跨文档一致性与覆盖分析（可选的审查步骤）
+         ↓
+/speckit-implement     →  按阶段执行任务
+```
+
+### 目录结构
+
+- `specs/` — 功能规格文档目录（每个功能一个子目录）
+- `.specify/templates/` — 规格、计划、任务、宪法的模板文件
+- `.specify/memory/` — 项目宪法等持久记忆
+- `.specify/init-options.json` — 项目初始化配置
+
+### 当前活跃计划
+
+- **001-fight-scene-optimization**: 战斗场景全章优化
+  - 计划文件: `specs/001-fight-scene-optimization/plan.md`
+  - 状态: Plan 阶段完成，等待 `/speckit-tasks` 生成任务列表
+<!-- SPECKIT END -->
